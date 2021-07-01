@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-public class NovoAutorResquet {
+public class NovoAutorRequest {
     @NotBlank
     private String nome;
 
@@ -18,7 +18,7 @@ public class NovoAutorResquet {
     @Size(max = 400)
     private String descricao;
 
-    public NovoAutorResquet(String nome, String email, String descricao) {
+    public NovoAutorRequest(String nome, String email, String descricao) {
         this.nome = nome;
         this.email = email;
         this.descricao = descricao;
@@ -30,4 +30,7 @@ public class NovoAutorResquet {
     }
 
 
+    public String getEmail() {
+        return this.email;
+    }
 }
