@@ -33,9 +33,9 @@ public class ValidarCategoriaValidator implements Validator {
 
         CategoriaRequest request = (CategoriaRequest) target;
 
-        Optional<Categoria> possivelAutor = categoriaRepository.findByNome(request.getNome());
+        Optional<Categoria> possivelCategoria = categoriaRepository.findByNome(request.getNome());
 
-        if (possivelAutor.isPresent()) {
+        if (possivelCategoria.isPresent()) {
             errors.rejectValue("nome", null,
                     "Já existe uma categoria com o mesmo nome "
                             + request.getNome());
