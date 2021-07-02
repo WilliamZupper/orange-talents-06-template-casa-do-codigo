@@ -1,16 +1,13 @@
 package br.com.zupedu.casadocodigo.repositories;
 
-import br.com.zupedu.casadocodigo.modelo.Autor;
+import br.com.zupedu.casadocodigo.modelo.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface AutorRepository extends JpaRepository<Autor, Long> {
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 
-    Optional<Autor> findByEmail(String email);
-
-
-
+     Optional<Categoria>findByNome(String nome);
 }

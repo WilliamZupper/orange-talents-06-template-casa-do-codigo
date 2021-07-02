@@ -31,11 +31,11 @@ public class AutorController {
 
     @PostMapping
     @Transactional
-public ResponseEntity<?>criar(@RequestBody @Valid NovoAutorRequest resquet){
+public ResponseEntity<Void>criar(@RequestBody @Valid NovoAutorRequest resquet){
   Autor autor = resquet.toModel();
       autorRepository.save(autor);
 
-    return ResponseEntity.ok().body(autor);
+    return ResponseEntity.ok().build();
 
 }
 
