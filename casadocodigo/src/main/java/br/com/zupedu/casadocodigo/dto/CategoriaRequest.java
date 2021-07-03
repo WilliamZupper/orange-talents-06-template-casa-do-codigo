@@ -1,6 +1,7 @@
 package br.com.zupedu.casadocodigo.dto;
 
 import br.com.zupedu.casadocodigo.modelo.Categoria;
+import br.com.zupedu.casadocodigo.validacao.UniqueValue;
 
 
 import javax.validation.constraints.NotBlank;
@@ -8,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 public class CategoriaRequest {
 
     @NotBlank
+    @UniqueValue(Classe = Categoria.class, campo = "nome")
     private String nome;
 
 

@@ -1,6 +1,7 @@
 package br.com.zupedu.casadocodigo.dto;
 
 import br.com.zupedu.casadocodigo.modelo.Autor;
+import br.com.zupedu.casadocodigo.validacao.UniqueValue;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -12,6 +13,7 @@ public class NovoAutorRequest {
 
     @NotBlank
     @Email
+    @UniqueValue(Classe = Autor.class,campo = "email")
     private String email;
 
     @NotBlank
