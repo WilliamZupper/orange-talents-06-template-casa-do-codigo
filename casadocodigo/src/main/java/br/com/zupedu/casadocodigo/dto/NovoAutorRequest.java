@@ -32,6 +32,8 @@ public class NovoAutorRequest {
     }
 
 
+
+
     public String getEmail() {
         return this.email;
     }

@@ -23,6 +23,7 @@ public class Autor {
 
     private LocalDateTime dataEntrada = LocalDateTime.now();
 
+    @Deprecated
     public Autor() {
     }
 
@@ -32,5 +33,8 @@ public class Autor {
         this.descricao = descricao;
 
     }
+
+
+
 
 }

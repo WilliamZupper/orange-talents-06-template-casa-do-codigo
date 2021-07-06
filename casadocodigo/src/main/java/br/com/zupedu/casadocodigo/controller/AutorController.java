@@ -21,7 +21,7 @@ public class AutorController {
 
     @PostMapping
     @Transactional
-public ResponseEntity<Void>criar(@RequestBody @Valid NovoAutorRequest resquet){
+public ResponseEntity<Autor>criar(@RequestBody @Valid NovoAutorRequest resquet){
   Autor autor = resquet.toModel();
       autorRepository.save(autor);
 
