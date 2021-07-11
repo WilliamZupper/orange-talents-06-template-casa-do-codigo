@@ -77,6 +77,8 @@ public class NovoLivroRequest {
     }
 
 
+
+
     public Livro toModel(EntityManager entityManager) {
 
         Autor a = entityManager.find(Autor.class, autor);
